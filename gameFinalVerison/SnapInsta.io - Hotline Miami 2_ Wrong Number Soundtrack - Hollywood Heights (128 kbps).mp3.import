@@ -1,0 +1,19 @@
+[remap]
+
+importer="mp3"
+type="AudioStreamMP3"
+uid="uid://cuys1iiyqo0gm"
+path="res://.godot/imported/SnapInsta.io - Hotline Miami 2_ Wrong Number Soundtrack - Hollywood Heights (128 kbps).mp3-4af3852ae8c8b8eb9ea33717fc4e0827.mp3str"
+
+[deps]
+
+source_file="res://SnapInsta.io - Hotline Miami 2_ Wrong Number Soundtrack - Hollywood Heights (128 kbps).mp3"
+dest_files=["res://.godot/imported/SnapInsta.io - Hotline Miami 2_ Wrong Number Soundtrack - Hollywood Heights (128 kbps).mp3-4af3852ae8c8b8eb9ea33717fc4e0827.mp3str"]
+
+[params]
+
+loop=false
+loop_offset=0
+bpm=0
+beat_count=0
+bar_beats=4

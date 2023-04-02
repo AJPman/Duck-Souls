@@ -1,0 +1,12 @@
+[gd_scene load_steps=2 format=3 uid="uid://bvlbutp0vnry"]
+
+[ext_resource type="PackedScene" uid="uid://bg6xmg3ihe23w" path="res://Interface/Counters/counter.tscn" id="1_kivmw"]
+
+[node name="breadCounter" instance=ExtResource("1_kivmw")]
+offset_right = 149.0
+
+[node name="BreadIcon" parent="." index="0"]
+offset_left = -51.0
+offset_top = -19.5
+offset_right = -11.0
+offset_bottom = 20.5

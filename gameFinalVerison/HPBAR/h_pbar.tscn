@@ -1,0 +1,54 @@
+[gd_scene load_steps=7 format=3 uid="uid://cf1auv7yxj16w"]
+
+[ext_resource type="Texture2D" uid="uid://o1epbm77lcmu" path="res://Interface/HPBAR/bg.png" id="1_uvdxa"]
+[ext_resource type="Texture2D" uid="uid://dskqjb44k1anb" path="res://Interface/HPBAR/fill.png" id="2_0vrdl"]
+[ext_resource type="Texture2D" uid="uid://c7ki8d4qabgb6" path="res://Interface/HPBAR/label_bg.png" id="3_232d1"]
+[ext_resource type="Theme" path="res://Interface/Theme/Game_Theme.tres" id="4_s67pd"]
+[ext_resource type="Texture2D" uid="uid://qp5bbtb6aquw" path="res://HPBAR/label_HP.png" id="5_nfpvl"]
+
+[sub_resource type="LabelSettings" id="LabelSettings_i3h1v"]
+font_size = 25
+
+[node name="HPbar" type="HBoxContainer"]
+custom_minimum_size = Vector2(70, 0)
+anchors_preset = -1
+anchor_left = 0.136
+anchor_right = 0.148
+offset_right = 623.0
+offset_bottom = 53.0
+
+[node name="TextureProgressBar" type="TextureProgressBar" parent="."]
+layout_mode = 2
+max_value = 9.0
+value = 6.0
+texture_under = ExtResource("1_uvdxa")
+texture_progress = ExtResource("2_0vrdl")
+
+[node name="NinePatchRect" type="NinePatchRect" parent="TextureProgressBar"]
+layout_mode = 0
+offset_left = -158.0
+offset_bottom = 51.0
+texture = ExtResource("3_232d1")
+
+[node name="Health" type="Label" parent="TextureProgressBar/NinePatchRect"]
+layout_mode = 0
+offset_left = 49.0
+offset_right = 159.0
+offset_bottom = 51.0
+theme = ExtResource("4_s67pd")
+text = "9/9"
+label_settings = SubResource("LabelSettings_i3h1v")
+horizontal_alignment = 1
+vertical_alignment = 1
+
+[node name="TextureRect" type="TextureRect" parent="TextureProgressBar/NinePatchRect"]
+layout_mode = 1
+anchors_preset = 4
+anchor_top = 0.5
+anchor_bottom = 0.5
+offset_left = 7.0
+offset_top = -20.0
+offset_right = 47.0
+offset_bottom = 20.0
+grow_vertical = 2
+texture = ExtResource("5_nfpvl")

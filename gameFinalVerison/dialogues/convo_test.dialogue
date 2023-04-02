@@ -1,0 +1,31 @@
+~ start
+
+NICOLAI: Uhh, HELLO!
+DUCKILLER: Sorry, I'm late.
+NICOLAI: Too late to apologise. Only way out is to answer the following questions!
+NICOLAI: What is the only acceptable way to write a text document?
+- Using pen and paper.
+	NICOLAI: WRONG! But not too wrong so it's ok.
+- Using LateX
+	NICOLAI: Acceptable.
+- Using Word (Will delete system32)
+	NICOLAI: ... 
+	NICOLAI: You knew this was coming...
+	=> END
+NICOLAI: Finish the following word: D E _ _ _ _ _ _ _ _
+- DEFINITION
+	NICOLAI: Inincorrect
+- DERIVATIVE
+	NICOLAI: wRONG.
+- THEOREM????
+	NICOLAI: Correct
+NICOLAI: Last but not least. Is 3 a number?
+- No.
+	NICOLAI: I'm afraid you are wrong.
+- The proof is straight forward from the definition.
+	NICOLAI: Very good.
+- Injective.
+	NICOLAI: Possible. I dont know.
+NICOLAI: Ok. I accept the defeat. 
+
+=> END

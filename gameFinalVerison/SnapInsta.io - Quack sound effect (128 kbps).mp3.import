@@ -1,0 +1,19 @@
+[remap]
+
+importer="mp3"
+type="AudioStreamMP3"
+uid="uid://cu1jev16sgmuj"
+path="res://.godot/imported/SnapInsta.io - Quack sound effect (128 kbps).mp3-45b0d558a6c34431389690d39a1351ec.mp3str"
+
+[deps]
+
+source_file="res://SnapInsta.io - Quack sound effect (128 kbps).mp3"
+dest_files=["res://.godot/imported/SnapInsta.io - Quack sound effect (128 kbps).mp3-45b0d558a6c34431389690d39a1351ec.mp3str"]
+
+[params]
+
+loop=false
+loop_offset=0
+bpm=0
+beat_count=0
+bar_beats=4

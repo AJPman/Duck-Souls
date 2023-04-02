@@ -1,0 +1,104 @@
+[gd_scene load_steps=15 format=3 uid="uid://cs46b4mww1145"]
+
+[ext_resource type="Script" path="res://hall.gd" id="1_ins86"]
+[ext_resource type="Texture2D" uid="uid://ycla8bbkgqmg" path="res://Interface/hall.png" id="1_qd2e0"]
+[ext_resource type="PackedScene" uid="uid://cughr3aore8yx" path="res://Interface/interface.tscn" id="3_napkv"]
+[ext_resource type="PackedScene" uid="uid://877qfrc11vs0" path="res://newduck1/Duck.tscn" id="4_e83j4"]
+[ext_resource type="AudioStream" uid="uid://p8gqcncmst5" path="res://SnapInsta.io - Dark Souls III Soundtrack OST   Vordt of the Boreal Valley (128 kbps).mp3" id="5_k07s2"]
+[ext_resource type="AudioStream" uid="uid://br0oid4w1a0k2" path="res://QUACK NEW.mp3" id="6_xdejg"]
+[ext_resource type="Script" path="res://Actionable.gd" id="7_pa5w5"]
+[ext_resource type="Resource" uid="uid://r61pnl0kye3n" path="res://dialogues/convo_test.dialogue" id="8_cwmfr"]
+[ext_resource type="AudioStream" uid="uid://hujho4r8wcqs" path="res://HUH HELLO.mp3" id="9_3b6qf"]
+[ext_resource type="AudioStream" uid="uid://6ph0th46qww6" path="res://SnapInsta.io - Techno Syndrome (Mortal Kombat) (128 kbps).mp3" id="10_2lb8e"]
+[ext_resource type="Texture2D" uid="uid://b7tvj2sxvi462" path="res://dialogues/FIGHTING PNG.png" id="10_jx3p0"]
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_f21s4"]
+size = Vector2(1248, 20)
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_tnsfo"]
+size = Vector2(18, 648)
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_0yqsc"]
+size = Vector2(424, 190)
+
+[node name="Node2D" type="Node2D"]
+script = ExtResource("1_ins86")
+
+[node name="StaticBody2D" type="StaticBody2D" parent="."]
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="StaticBody2D"]
+position = Vector2(614, 0)
+shape = SubResource("RectangleShape2D_f21s4")
+
+[node name="StaticBody2D2" type="StaticBody2D" parent="."]
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="StaticBody2D2"]
+position = Vector2(616, 640)
+shape = SubResource("RectangleShape2D_f21s4")
+
+[node name="Sprite2D" type="Sprite2D" parent="."]
+position = Vector2(620, 318)
+texture = ExtResource("1_qd2e0")
+metadata/_edit_lock_ = true
+
+[node name="Boss_music" type="AudioStreamPlayer" parent="."]
+stream = ExtResource("5_k07s2")
+volume_db = -30.0
+
+[node name="CharacterBody2D" parent="." instance=ExtResource("4_e83j4")]
+position = Vector2(85, 186)
+metadata/_edit_lock_ = true
+
+[node name="Camera2D" type="Camera2D" parent="CharacterBody2D"]
+position = Vector2(0, 4)
+zoom = Vector2(2, 2)
+limit_smoothed = true
+position_smoothing_enabled = true
+
+[node name="CanvasLayer" type="CanvasLayer" parent="CharacterBody2D"]
+
+[node name="Interface" parent="CharacterBody2D/CanvasLayer" instance=ExtResource("3_napkv")]
+metadata/_edit_use_anchors_ = true
+
+[node name="QUACK" type="AudioStreamPlayer" parent="CharacterBody2D"]
+stream = ExtResource("6_xdejg")
+volume_db = -10.227
+
+[node name="StaticBody2D3" type="StaticBody2D" parent="."]
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="StaticBody2D3"]
+position = Vector2(-1, 314)
+shape = SubResource("RectangleShape2D_tnsfo")
+
+[node name="StaticBody2D3" type="StaticBody2D" parent="StaticBody2D3"]
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="StaticBody2D3/StaticBody2D3"]
+position = Vector2(1241, 320)
+shape = SubResource("RectangleShape2D_tnsfo")
+
+[node name="Actionable" type="Area2D" parent="."]
+position = Vector2(616, 118)
+script = ExtResource("7_pa5w5")
+dialogue_resource = ExtResource("8_cwmfr")
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Actionable"]
+position = Vector2(-16, -18)
+shape = SubResource("RectangleShape2D_0yqsc")
+
+[node name="hello" type="AudioStreamPlayer" parent="Actionable"]
+stream = ExtResource("9_3b6qf")
+
+[node name="Mk_theme" type="AudioStreamPlayer" parent="Actionable"]
+stream = ExtResource("10_2lb8e")
+volume_db = -30.0
+
+[node name="Camera2" type="Camera2D" parent="."]
+position = Vector2(-877, 51)
+
+[node name="Sprite2D2" type="Sprite2D" parent="."]
+position = Vector2(-885, 49)
+scale = Vector2(0.915625, 0.897222)
+texture = ExtResource("10_jx3p0")
+
+[connection signal="area_shape_entered" from="Actionable" to="Actionable" method="_on_area_shape_entered"]
+[connection signal="body_entered" from="Actionable" to="." method="_on_actionable_body_entered"]

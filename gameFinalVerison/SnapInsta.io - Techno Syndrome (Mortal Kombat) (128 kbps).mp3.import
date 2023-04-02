@@ -1,0 +1,19 @@
+[remap]
+
+importer="mp3"
+type="AudioStreamMP3"
+uid="uid://6ph0th46qww6"
+path="res://.godot/imported/SnapInsta.io - Techno Syndrome (Mortal Kombat) (128 kbps).mp3-65234502b933461c918c47d93ebc375f.mp3str"
+
+[deps]
+
+source_file="res://SnapInsta.io - Techno Syndrome (Mortal Kombat) (128 kbps).mp3"
+dest_files=["res://.godot/imported/SnapInsta.io - Techno Syndrome (Mortal Kombat) (128 kbps).mp3-65234502b933461c918c47d93ebc375f.mp3str"]
+
+[params]
+
+loop=false
+loop_offset=0
+bpm=0
+beat_count=0
+bar_beats=4

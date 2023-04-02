@@ -1,0 +1,19 @@
+[remap]
+
+importer="mp3"
+type="AudioStreamMP3"
+uid="uid://br0oid4w1a0k2"
+path="res://.godot/imported/QUACK NEW.mp3-65a0717fd4e10e6ffd97b6c474dd6da3.mp3str"
+
+[deps]
+
+source_file="res://QUACK NEW.mp3"
+dest_files=["res://.godot/imported/QUACK NEW.mp3-65a0717fd4e10e6ffd97b6c474dd6da3.mp3str"]
+
+[params]
+
+loop=false
+loop_offset=0
+bpm=0
+beat_count=0
+bar_beats=4

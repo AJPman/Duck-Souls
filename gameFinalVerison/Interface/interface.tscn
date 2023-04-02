@@ -1,0 +1,51 @@
+[gd_scene load_steps=6 format=3 uid="uid://cughr3aore8yx"]
+
+[ext_resource type="Script" path="res://Interface/interface.gd" id="1_qdkcu"]
+[ext_resource type="Texture2D" uid="uid://chdcl8as2qnb2" path="res://Interface/Counters/Bread/label_bread.png" id="2_3tric"]
+[ext_resource type="PackedScene" uid="uid://crli4l24k15h0" path="res://Interface/Counters/counter.tscn" id="2_62ut0"]
+[ext_resource type="PackedScene" uid="uid://cf1auv7yxj16w" path="res://HPBAR/h_pbar.tscn" id="2_trany"]
+[ext_resource type="Texture2D" uid="uid://byro741ehnwi" path="res://Interface/Library_card.png" id="3_2dyhm"]
+
+[node name="Interface" type="Control"]
+layout_mode = 3
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+script = ExtResource("1_qdkcu")
+
+[node name="LIbrary_Card_Counter" parent="." instance=ExtResource("2_62ut0")]
+layout_mode = 1
+offset_left = 0.0
+offset_top = 0.0
+offset_right = 211.0
+offset_bottom = 80.0
+
+[node name="BreadIcon" parent="LIbrary_Card_Counter" index="0"]
+texture = ExtResource("3_2dyhm")
+expand_mode = 1
+
+[node name="BreadCounter" parent="." instance=ExtResource("2_62ut0")]
+layout_mode = 0
+offset_left = 218.0
+offset_top = 0.0
+offset_right = 384.0
+offset_bottom = 80.0
+
+[node name="BreadIcon" parent="BreadCounter" index="0"]
+texture = ExtResource("2_3tric")
+expand_mode = 1
+
+[node name="HPbar" parent="." instance=ExtResource("2_trany")]
+layout_mode = 1
+anchors_preset = 1
+anchor_left = 1.0
+anchor_right = 1.0
+offset_left = -396.0
+offset_right = 0.0
+grow_horizontal = 0
+
+[editable path="LIbrary_Card_Counter"]
+[editable path="BreadCounter"]
+[editable path="HPbar"]
